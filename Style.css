@@ -10,6 +10,7 @@
 body{
     background-color: var(--Light-pink);
     background-image: url(assets/images/background-pattern-mobile.svg);
+    background-size: 100vw;
     background-repeat: no-repeat;
     height: 100vh;
     display: flex;
@@ -35,12 +36,12 @@ container{
     background: var(--White);
     height: auto;
     width: 90vw;
+    max-width: 500px;
     border-radius: 10px;
 }
 
 h3{
-    font-weight: 600;
-    padding-right: 10px;
+    padding-right: 20px;
     color: var(--Dark-purple);
     font-size: 16px;
 }
@@ -50,9 +51,6 @@ h3:hover{
     cursor: pointer;
 }
 
-.plus:hover{
-    cursor: pointer;
-}
 
 .logo{
     display: flex;
@@ -69,12 +67,31 @@ h3:hover{
 .acordeon{
     width: 100%;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .h3{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+}
+
+.img{
+    background-image: url(assets/images/icon-plus.svg);
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+.img:hover{
+    cursor: pointer;
+}
+
+.img.minus{
+    background-image: url(assets/images/icon-minus.svg);
+    overflow: visible;
 }
 
 .parrafo{
@@ -103,6 +120,13 @@ h3:hover{
     height: 100%;
 } */
 
+
+@media screen and (min-width:900px){
+    body{
+        background-image: url(assets/images/background-pattern-desktop.svg);
+        background-size: 100vw;
+    }
+}
 
 
 
