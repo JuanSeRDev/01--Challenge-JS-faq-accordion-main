@@ -1,12 +1,16 @@
 "use strict"
 
-let acordeones = document.querySelector(".acordeon");
-const titulos = document.querySelector(".h3");
+const acordeones = document.querySelectorAll(".acordeon");
+const titulo = document.querySelectorAll(".h3");
 
-acordeones.addEventListener("click", ()=>{
-    if (acordeones.classList.contains("active")) {
-        acordeones.classList.remove("active");
-    } else {
-        acordeones.classList.add("active")
-    }
-})
+titulo.forEach((cadaTitulo, i)=>{
+    titulo[i].addEventListener("click", ()=>{
+        if (acordeones[i].classList.contains("active")){
+            acordeones[i].classList.remove("active");
+        } else{
+            acordeones[i].classList.add("active")
+        }
+        
+    })
+});
+
